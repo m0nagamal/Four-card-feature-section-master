@@ -1,0 +1,121 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+main {
+    width: 100%;
+    min-height: 100vh;
+    background-color: hsl(0, 0%, 98%);
+    padding: 50px 20px;
+}
+
+main h1 {
+    text-align: center;
+    font-size: 23px;
+    color: hsl(229, 6%, 66%);
+    font-weight: normal;
+}
+
+main h1 span {
+    display: block;
+    font-size: 25px;
+    color: hsl(234, 12%, 34%);
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+main > p {
+    width: 100%;
+    font-size: 15px;
+    text-align: center;
+    color: hsl(229, 6%, 66%);
+    margin: auto;
+}
+
+main .container {
+    display: grid;
+    grid-template-columns: minmax(330px, 1fr);
+    gap: 30px;
+    padding: 50px 0;
+}
+
+@media (min-width: 992px) {
+    main > p {
+        width: 500px;
+    }
+
+    main .container {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, 100px);
+        grid-template-areas: '. team .' 'super team cal' 'super karma cal' '. karma .';
+        padding: 50px 150px;
+    }
+}
+
+main .container section {
+    min-height: 230px;
+    background-color: white;
+    padding: 20px;
+    position: relative;
+    box-shadow: -5px 10px 15px 0 hsl(230, 14%, 91%);
+}
+
+main .container section.supervisor {
+    border-top: 4px solid hsl(180, 62%, 55%);
+}
+
+main .container section.team-builder {
+    border-top: 4px solid hsl(0, 78%, 62%);
+}
+
+main .container section.karma {
+    border-top: 4px solid hsl(34, 97%, 64%);
+}
+
+main .container section.calculator {
+    border-top: 4px solid hsl(212, 86%, 64%);
+}
+
+@media (min-width: 992px) {
+    main .container section.supervisor {
+        grid-area: super;
+    }
+    main .container section.team-builder {
+        grid-area: team;
+    }
+
+    main .container section.karma {
+        grid-area: karma;
+    }
+
+    main .container section.calculator {
+        grid-area: cal;
+    }
+}
+
+main .container section h3 {
+    font-size: 18px;
+    color: hsl(234, 12%, 34%);
+    margin-bottom: 10px;
+}
+
+main .container section p {
+    font-size: 13px;
+    color: hsl(229, 6%, 66%);
+}
+
+main .container section img {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+}
