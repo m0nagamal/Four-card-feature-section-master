@@ -21,17 +21,26 @@ main {
 
 main h1 {
     text-align: center;
-    font-size: 23px;
+    font-size: 32px;
     color: hsl(229, 6%, 66%);
     font-weight: normal;
 }
 
 main h1 span {
     display: block;
-    font-size: 25px;
+    font-size: 33px;
     color: hsl(234, 12%, 34%);
     font-weight: 600;
     margin-bottom: 15px;
+}
+
+@media (max-width: 991px) {
+    main h1 {
+        font-size: 24px;
+    }
+    main h1 span {
+        font-size: 25px;
+    }
 }
 
 main > p {
@@ -103,14 +112,14 @@ main .container section.calculator {
     }
 }
 
-main .container section h3 {
+main .container section h2 {
     font-size: 18px;
     color: hsl(234, 12%, 34%);
     margin-bottom: 10px;
 }
 
 main .container section p {
-    font-size: 13px;
+    font-size: 15px;
     color: hsl(229, 6%, 66%);
 }
 
